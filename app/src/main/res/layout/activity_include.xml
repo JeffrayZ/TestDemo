@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <import type="com.test.listener.TextClick"></import>
+        <import type="com.test.bean.UserBean"></import>
+        <variable
+            name="myListener"
+            type="TextClick"></variable>
+        <variable
+            name="myUser"
+            type="UserBean"></variable>
+        <variable
+            name="clickText"
+            type="String"></variable>
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp"
+        android:orientation="vertical">
+        <!-- 因为我们要去找到edittext，所以要加id-->
+        <include layout="@layout/include_edittext"
+            android:id="@+id/include_et_input"></include>
+
+        <!-- 通过配置 xmlns:app="http://schemas.android.com/apk/res-auto"
+            app:user="@{myUser}"
+            将这个myUser传到 include_user 里面
+        -->
+        <include layout="@layout/include_user"
+            app:user="@{myUser}"></include>
+
+        <!--
+            通过这种方式传值过去，这些值是 include_click 需要的
+        -->
+        <include layout="@layout/include_click"
+            app:listener="@{myListener}"
+            app:clickText="@{clickText}"></include>
+    </LinearLayout>
+</layout>

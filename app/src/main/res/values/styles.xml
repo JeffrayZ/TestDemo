@@ -1,0 +1,34 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.SoftKeyBordTheme">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="textview_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+    <style name="MySwitch" parent="Base.Widget.AppCompat.CompoundButton.Switch">
+        <item name="colorControlActivated">#ff0000</item>
+        <item name="android:colorForeground">#00ff00</item>
+        <item name="colorSwitchThumbNormal">#0000ff</item>
+    </style>
+
+</resources>
+
+<!--
+    <item name="colorControlActivated">#ff0000</item>
+    <item name="android:colorForeground">#00ff00</item>
+    <item name="colorSwitchThumbNormal">#0000ff</item>
+-->
+

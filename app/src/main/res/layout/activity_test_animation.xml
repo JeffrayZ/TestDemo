@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.test.activity.TestAnimationActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="补间旋转"
+            android:id="@+id/tween_rotate"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="补间平移"
+            android:id="@+id/tween_translate"
+            android:layout_alignBottom="@+id/tween_rotate"
+            android:layout_toRightOf="@+id/tween_rotate"
+            android:layout_toEndOf="@+id/tween_rotate" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="补间缩放"
+            android:id="@+id/tween_scale"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/tween_translate"
+            android:layout_toEndOf="@+id/tween_translate" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="补间透明"
+            android:id="@+id/tween_alpha"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/tween_scale"
+            android:layout_toEndOf="@+id/tween_scale" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="补间组合"
+            android:id="@+id/tween_set"
+            android:layout_below="@+id/tween_rotate"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="属性平移"
+            android:id="@+id/value_translate"
+            android:layout_below="@+id/tween_rotate"
+            android:layout_toRightOf="@+id/tween_set"
+            android:layout_toEndOf="@+id/tween_set" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="属性旋转"
+            android:id="@+id/object_rotate"
+            android:layout_alignBottom="@+id/value_translate"
+            android:layout_toRightOf="@+id/value_translate"
+            android:layout_toEndOf="@+id/value_translate" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="属性缩放"
+            android:id="@+id/object_scale"
+            android:layout_alignBottom="@+id/object_rotate"
+            android:layout_toRightOf="@+id/object_rotate"
+            android:layout_toEndOf="@+id/object_rotate" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="属性透明"
+            android:id="@+id/object_alpha"
+            android:layout_below="@+id/tween_set"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="属性组合"
+            android:id="@+id/object_set"
+            android:layout_below="@+id/tween_set"
+            android:layout_toRightOf="@+id/tween_set"
+            android:layout_toEndOf="@+id/tween_set" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="随便写一个属性"
+            android:id="@+id/object_random"
+            android:layout_alignBottom="@+id/object_set"
+            android:layout_toRightOf="@+id/object_set"
+            android:layout_toEndOf="@+id/object_set" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="测试propertyValuesHolder"
+            android:id="@+id/test_propertyValuesHolder"
+            android:layout_below="@+id/object_alpha"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="测试View.animate()"
+            android:id="@+id/test_view_animate"
+            android:layout_alignBottom="@+id/test_propertyValuesHolder"
+            android:layout_toRightOf="@+id/test_propertyValuesHolder"
+            android:layout_toEndOf="@+id/test_propertyValuesHolder"
+            android:textAllCaps="false"/>
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@mipmap/test_04"
+        android:layout_gravity="bottom"
+        android:visibility="invisible"
+        android:id="@+id/image"
+        android:clickable="true"
+        android:scaleType="fitXY"/>
+
+</FrameLayout>

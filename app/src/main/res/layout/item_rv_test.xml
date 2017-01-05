@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        android:padding="16dp"
+        android:id="@+id/tv_rv_head"
+        android:background="@android:color/holo_red_light"/>
+
+    <com.test.view.NoScrollGridView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:verticalSpacing="@dimen/dp_10"
+        android:horizontalSpacing="@dimen/dp_10"
+        android:numColumns="4"
+        android:id="@+id/gv_test">
+
+    </com.test.view.NoScrollGridView>
+
+</LinearLayout>

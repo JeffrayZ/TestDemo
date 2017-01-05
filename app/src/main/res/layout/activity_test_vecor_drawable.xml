@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.test.activity.TestVecorDrawableActivity"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <ImageView
+        android:id="@+id/vector_drawable_cpu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/vector_drawable_cpu" />
+
+    <ImageView
+        android:id="@+id/vector_drawable_cpu_ani"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/vector_drawable_cpu"
+        app:srcCompat="@drawable/animated_cpu" />
+
+    <ImageView
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:id="@+id/iv_my"
+        app:srcCompat="@drawable/android_vector"
+        android:layout_alignParentRight="true"/>
+
+    <ImageView
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        app:srcCompat="@drawable/simple_animation_vector"
+        android:layout_below="@+id/vector_drawable_cpu"
+        android:id="@+id/iv_simple"/>
+
+    <ImageView
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        app:srcCompat="@drawable/animated_square"
+        android:layout_below="@+id/iv_simple"
+        android:id="@+id/iv_square"
+        />
+</RelativeLayout>

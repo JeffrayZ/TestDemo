@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.test.view.NoScrollGridView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:numColumns="4"
+        android:horizontalSpacing="4dp"
+        android:verticalSpacing="4dp"
+        android:id="@+id/nsgv_json">
+
+    </com.test.view.NoScrollGridView>
+
+</LinearLayout>

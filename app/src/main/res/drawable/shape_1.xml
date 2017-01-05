@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="line" >
+
+    <corners android:radius="4dp"></corners>
+
+    <stroke
+        android:color="#ff0000"
+        android:dashGap="2dp"
+        android:dashWidth="8dp"
+        android:width="2dp">
+    </stroke>
+
+
+</shape>
+
+
+
+    <!--
+    android:shape=["rectangle" | "oval" | "line" | "ring"]
+    dashGap 破折线之间的间隙宽度
+    dashWidth 破折线的宽度
+
+    -->

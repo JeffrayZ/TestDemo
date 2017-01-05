@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.test.activity.TestJsonActivity">
+
+ <LinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:orientation="horizontal"
+     android:id="@+id/ll_checkbox">
+
+     <CheckBox
+         android:layout_width="0dp"
+         android:layout_height="wrap_content"
+         android:layout_weight="1"
+         android:id="@+id/cb_one"
+         android:button="@null"
+         android:text="第一个"
+         android:paddingTop="16dp"
+         android:paddingBottom="16dp"
+         android:gravity="center"/>
+
+     <CheckBox
+         android:layout_width="0dp"
+         android:layout_height="wrap_content"
+         android:layout_weight="1"
+         android:id="@+id/cb_two"
+         android:button="@null"
+         android:text="第二个"
+         android:paddingTop="16dp"
+         android:paddingBottom="16dp"
+         android:gravity="center"/>
+
+     <CheckBox
+         android:layout_width="0dp"
+         android:layout_height="wrap_content"
+         android:layout_weight="1"
+         android:id="@+id/cb_three"
+         android:button="@null"
+         android:text="第三个"
+         android:paddingTop="16dp"
+         android:paddingBottom="16dp"
+         android:gravity="center"/>
+
+     <CheckBox
+         android:layout_width="0dp"
+         android:layout_height="wrap_content"
+         android:layout_weight="1"
+         android:id="@+id/cb_four"
+         android:button="@null"
+         android:text="第四个"
+         android:paddingTop="16dp"
+         android:paddingBottom="16dp"
+         android:gravity="center"/>
+ </LinearLayout>
+</RelativeLayout>

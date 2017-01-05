@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context="cn.pjcare.www.timepicker.MainActivity">
+    <!--<include layout="@layout/include_pickerview_topbar"></include>-->
+    <!--<LinearLayout-->
+        <!--android:id="@+id/optionspicker"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@android:color/white"-->
+        <!--android:orientation="horizontal">-->
+
+        <!--<com.bigkoo.pickerview.lib.WheelView-->
+            <!--android:id="@+id/options1"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1.5"-->
+            <!--android:layout_gravity="center"/>-->
+
+        <!--<com.bigkoo.pickerview.lib.WheelView-->
+            <!--android:id="@+id/options2"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:layout_gravity="center"/>-->
+
+        <!--<com.bigkoo.pickerview.lib.WheelView-->
+            <!--android:id="@+id/options3"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:layout_gravity="center"/>-->
+    <!--</LinearLayout>-->
+    <TextView
+        android:id="@+id/tvOptions"
+        android:layout_margin="50dp"
+        android:layout_below="@+id/tvTime"
+        android:text="条件"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+</LinearLayout>

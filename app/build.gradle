@@ -1,0 +1,61 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+
+    dataBinding{
+        enabled = true
+    }
+
+    defaultConfig {
+        applicationId "com.test"
+        minSdkVersion 14
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+
+        // vector-animate 需要这个
+        generatedDensities = []
+        vectorDrawables.useSupportLibrary = true
+    }
+
+    // vector-animate 需要这个
+    aaptOptions {
+        additionalParameters "--no-version-vectors"
+    }
+    // vector-animate 需要这个
+    lintOptions {
+        abortOnError false
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:v1.8.1'
+    compile 'com.android.support:design:23.4.0'
+    compile 'com.loopj.android:android-async-http:1.4.9'
+    compile 'io.reactivex:rxandroid:1.2.1'
+    compile 'io.reactivex:rxjava:1.1.6'
+    compile 'com.android.support:support-v4:23.4.0'
+    compile 'com.android.support:cardview-v7:23.4.0'
+    compile 'com.android.support:support-vector-drawable:23.4.0'
+    compile 'com.android.support:animated-vector-drawable:23.4.0'
+    compile 'com.github.promeg:tinypinyin:1.0.0' // ~80KB
+    compile 'com.android.support.constraint:constraint-layout:1.0.0-beta4'
+
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+

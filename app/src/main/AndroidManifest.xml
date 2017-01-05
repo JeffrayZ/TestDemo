@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.test">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".activity.RecyclerViewActivity">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity android:name=".activity.TestFooterActivity">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity android:name=".activity.ShapeActivity" />
+        <!-- 主界面-->
+        <activity android:name=".activity.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.TestToastActivity" />
+        <activity android:name=".activity.TestLayoutTransitionActivity" />
+        <activity android:name=".activity.ListViewActivity" />
+        <activity android:name=".activity.TestJsonActivity" />
+        <activity android:name=".activity.TestEditTextActivity" />
+        <activity android:name=".activity.TestRxAndroidActivity" />
+        <activity android:name=".activity.TestAppCompactActivity" />
+        <activity android:name=".activity.TestChooserTargetServiceActivity" />
+        <activity android:name=".activity.TesttoggleButton" />
+        <activity
+            android:name=".activity.SettingsActivity"
+            android:label="@string/title_activity_settings" />
+        <activity android:name=".activity.TestAppBarLayoutActivity" />
+        <activity android:name=".activity.TestBackgroundHintActivity" />
+        <activity android:name=".activity.TestAnimationActivity" />
+        <activity android:name=".activity.ValueAnimAcitivity" />
+        <activity android:name=".activity.TestViewpagerActivity" />
+        <activity android:name=".activity.TestBottomSheetActivity" />
+        <activity android:name=".activity.TestVecorDrawableActivity" />
+        <activity
+            android:name=".activity.TestSoftKeybordActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".activity.TestTintActivity" />
+        <activity android:name=".activity.RecyclerViewHeaderActivity" />
+        <activity android:name=".activity.TestDataBindingActivity" />
+        <activity android:name=".activity.DBJavaBeanActivity" />
+        <activity android:name=".activity.ComplexJBActivity" />
+        <activity android:name=".activity.IncludeActivity" />
+        <activity android:name=".activity.TestConstraintLayoutActivity" />
+        <!--<activity android:name=".activity.TimePickerActivity">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        <!--</activity>-->
+    </application>
+
+</manifest> <!-- android:theme="@style/AppTheme.SoftKeyBordTheme" -->
