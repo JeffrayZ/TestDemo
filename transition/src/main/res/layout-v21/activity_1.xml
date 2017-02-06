@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.transition.Activity1"
+    android:padding="16dp"
+    android:orientation="vertical">
+
+    <!--可以通过如下代码设置波纹的背景：-->
+    <!--android:background="?android:attr/selectableItemBackground"波纹有边界-->
+    <!--android:background="?android:attr/selectableItemBackgroundBorderless"波纹超出边界-->
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:text="B1"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:text="B2"
+        android:background="?android:attr/selectableItemBackground"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:text="B3"
+        android:background="?android:attr/selectableItemBackgroundBorderless"/>
+</LinearLayout>
