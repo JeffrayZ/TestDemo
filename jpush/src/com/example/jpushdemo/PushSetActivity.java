@@ -20,7 +20,7 @@ import cn.jpush.android.api.BasicPushNotificationBuilder;
 import cn.jpush.android.api.CustomPushNotificationBuilder;
 import cn.jpush.android.api.InstrumentedActivity;
 import cn.jpush.android.api.JPushInterface;
- import  com.pjgh.doctor.R;
+ import  com.pj.myregistermain.R;
 import cn.jpush.android.api.MultiActionsNotificationBuilder;
 import cn.jpush.android.api.TagAliasCallback;
 

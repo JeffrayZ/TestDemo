@@ -15,7 +15,7 @@ import android.widget.Toast;
 
 import cn.jpush.android.api.InstrumentedActivity;
 import cn.jpush.android.api.JPushInterface;
- import  com.pjgh.doctor.R;
+ import  com.pj.myregistermain.R;
 
 
 
