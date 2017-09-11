@@ -6,3 +6,9 @@ settings.gradle
 build
 gradle
 
+libs/
+src/main/res/drawable-xhdpi-v4/
+/.idea/
+/.gradle/
+/build/
+/gradle/

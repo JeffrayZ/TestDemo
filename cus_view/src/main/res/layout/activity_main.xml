@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cus_view.MainActivity"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <!--<com.cus_view.CustomTitleView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--app:titleText="3127"-->
+        <!--app:titleTextColor="#ff0000"-->
+        <!--app:titleTextSize="40sp"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:padding="10dp" />-->
+
+    <!--<com.cus_view.PopView-->
+        <!--android:layout_width="200dp"-->
+        <!--android:layout_height="100dp"-->
+        <!--android:layout_centerInParent="true" />-->
+
+    <!--<com.cus_view.WaveView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--app:waveColor="#45c768"-->
+        <!--app:mode="circle"-->
+        <!--app:waveCount="15"-->
+        <!--app:waveWith="24"/>-->
+
+    <!--<com.cus_view.CirclePercentView-->
+        <!--android:id="@+id/circleView"-->
+        <!--android:layout_width="100dp"-->
+        <!--android:layout_height="100dp"-->
+        <!--app:bigColor="#45c768"-->
+        <!--app:percent="45"-->
+        <!--app:stripeWidth="12dp"-->
+        <!--app:centerTextSize="16sp"-->
+        <!--app:smallColor="@color/colorAccent"-->
+        <!--android:layout_centerInParent="true" />-->
+
+    <!--<Button-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="改变数值"-->
+        <!--android:id="@+id/button"/>-->
+
+
+    <!--<com.cus_view.SimpleLineChart-->
+        <!--android:layout_width="400dp"-->
+        <!--android:layout_height="200dp"-->
+        <!--android:id="@+id/slc" />-->
+
+
+    <com.cus_view.PanelView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>

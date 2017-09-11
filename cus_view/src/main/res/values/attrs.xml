@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="titleText" format="string" />
+    <attr name="titleTextColor" format="color" />
+    <attr name="titleTextSize" format="dimension" />
+
+    <declare-styleable name="CustomTitleView">
+        <attr name="titleText" />
+        <attr name="titleTextColor" />
+        <attr name="titleTextSize" />
+    </declare-styleable>
+
+    <declare-styleable name="WaveView">
+        <attr name="waveCount" format="integer"></attr>
+        <attr name="waveWith" format="integer"></attr>
+        <attr name="waveColor" format="color"></attr>
+        <attr name="mode">
+            <enum name="circle" value="-1"></enum>
+            <enum name="triangle" value="-2"></enum>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="CirclePercentView">
+        <attr name="radius" format="dimension"/>
+        <attr name="stripeWidth" format="dimension"/><!--色带宽度-->
+        <attr name="percent" format="integer"/><!--百分比 最大值为100-->
+        <attr name="smallColor" format="color"/><!--色带宽度-->
+        <!--外圈颜色-->
+        <attr name="bigColor" format="color"/>
+
+        <!--中间字体颜色-->
+        <attr name="centerTextSize" format="dimension"/>
+        <!--色带宽度-->
+    </declare-styleable>
+
+
+
+    <declare-styleable name="PanelView">
+        <attr name="arcColor" format="color"/>
+        <attr name="arcWidth" format="dimension"/>
+        <attr name="android:text"/>
+        <attr name="tikeCount" format="integer"/>
+        <attr name="pointerColor" format="color"/>
+        <attr name="android:textSize"/>
+    </declare-styleable>
+
+</resources>
