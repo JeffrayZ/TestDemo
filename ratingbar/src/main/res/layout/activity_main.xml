@@ -10,12 +10,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:numStars="5"
-        android:rating="1.6"
+        android:rating="2.3"
         android:isIndicator="false"
         android:stepSize="0.1"
         style="?android:attr/ratingBarStyleSmall" />
     <RatingBar
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        style="@style/foodRatingBar"/>
+        android:progressDrawable="@drawable/cus_ratingbar"
+        android:numStars="5"
+        android:rating="2.3"
+        android:isIndicator="false"
+        android:stepSize="0.1"/>
 </LinearLayout>

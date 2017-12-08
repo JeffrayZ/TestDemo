@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/px145"
+    android:layout_marginBottom="@dimen/divide_line_height"
+    android:layout_marginTop="@dimen/px30"
+    android:background="#ffffff"
+    android:gravity="center_vertical">
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="@dimen/px8"
+        android:layout_height="20dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/px30"
+        android:layout_marginRight="@dimen/px24"
+        android:background="#FFA229" />
+
+    <TextView
+        android:id="@+id/tv_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/line"
+        android:text="购车攻略"
+        android:textColor="#8d8d8d"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/px30"
+        android:drawablePadding="@dimen/px20"
+        android:drawableRight="@drawable/icon_arrow_next_gray"
+        android:text="更多"
+        android:textColor="#8d8d8d"
+        android:textSize="16sp" />
+
+
+</RelativeLayout>

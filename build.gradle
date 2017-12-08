@@ -1,8 +1,18 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
+    // kotlin支持开始
+    ext.kotlin_version = '1.2.0'
+    ext.anko_version='0.10.3'
+    // kotlin支持结束
+
     repositories {
         jcenter()
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
+        mavenCentral()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:2.3.3'
@@ -15,6 +25,10 @@ buildscript {
         classpath ('com.tencent.tinker:tinker-patch-gradle-plugin:1.7.5')
         // tinkersupport插件
         classpath "com.tencent.bugly:tinker-support:1.0.1"
+        // kotlin支持开始
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "org.jetbrains.kotlin:kotlin-android-extensions:$kotlin_version"
+        // kotlin支持结束
     }
 }
 
@@ -22,6 +36,10 @@ allprojects {
     repositories {
         jcenter()
         maven { url "https://jitpack.io" }
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
     }
 }
 

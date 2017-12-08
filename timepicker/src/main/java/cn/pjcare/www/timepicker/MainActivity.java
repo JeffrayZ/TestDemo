@@ -2,144 +2,109 @@ package cn.pjcare.www.timepicker;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.AppCompatButton;
 import android.view.View;
 import android.widget.TextView;
 
-import com.bigkoo.pickerview.model.IPickerViewData;
+import com.bigkoo.pickerview.listener.CustomListener;
 
-import java.util.ArrayList;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
-import cn.pjcare.www.timepicker.view.CustomOptions;
 
 public class MainActivity extends AppCompatActivity {
-
-    private ArrayList<ProvinceBean> options1Items = new ArrayList<>();
-    private ArrayList<ArrayList<String>> options2Items = new ArrayList<>();
-    private ArrayList<ArrayList<ArrayList<IPickerViewData>>> options3Items = new ArrayList<>();
-    CustomOptions pvOptions;
-    private TextView tvOptions;
+    private MyPickerView mpv;
+    private AppCompatButton btnShow;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        tvOptions=(TextView) findViewById(R.id.tvOptions);
-        //选项选择器
-        pvOptions = new CustomOptions(this);
-        //选项1
-        options1Items.add(new ProvinceBean(0,"广东","广东省，以岭南东道、广南东路得名","其他数据"));
-        options1Items.add(new ProvinceBean(1,"湖南","湖南省地处中国中部、长江中游，因大部分区域处于洞庭湖以南而得名湖南","芒果TV"));
-        options1Items.add(new ProvinceBean(3,"广西","嗯～～",""));
-
-        //选项2
-        ArrayList<String> options2Items_01=new ArrayList<>();
-        options2Items_01.add("广州");
-        options2Items_01.add("佛山");
-        options2Items_01.add("东莞");
-        options2Items_01.add("阳江");
-        options2Items_01.add("珠海");
-        ArrayList<String> options2Items_02=new ArrayList<>();
-        options2Items_02.add("长沙");
-        options2Items_02.add("岳阳");
-        ArrayList<String> options2Items_03=new ArrayList<>();
-        options2Items_03.add("桂林");
-        options2Items.add(options2Items_01);
-        options2Items.add(options2Items_02);
-        options2Items.add(options2Items_03);
-
-        //选项3
-        ArrayList<ArrayList<IPickerViewData>> options3Items_01 = new ArrayList<>();
-        ArrayList<ArrayList<IPickerViewData>> options3Items_02 = new ArrayList<>();
-        ArrayList<ArrayList<IPickerViewData>> options3Items_03 = new ArrayList<>();
-        ArrayList<IPickerViewData> options3Items_01_01=new ArrayList<>();
-        options3Items_01_01.add(new PickerViewData("天河"));
-        options3Items_01_01.add(new PickerViewData("黄埔"));
-        options3Items_01_01.add(new PickerViewData("海珠"));
-        options3Items_01_01.add(new PickerViewData("越秀"));
-        options3Items_01.add(options3Items_01_01);
-        ArrayList<IPickerViewData> options3Items_01_02=new ArrayList<>();
-        options3Items_01_02.add(new PickerViewData("南海"));
-        options3Items_01_02.add(new PickerViewData("高明"));
-        options3Items_01_02.add(new PickerViewData("禅城"));
-        options3Items_01_02.add(new PickerViewData("桂城"));
-        options3Items_01.add(options3Items_01_02);
-        ArrayList<IPickerViewData> options3Items_01_03=new ArrayList<>();
-        options3Items_01_03.add(new PickerViewData("其他"));
-        options3Items_01_03.add(new PickerViewData("常平"));
-        options3Items_01_03.add(new PickerViewData("虎门"));
-        options3Items_01.add(options3Items_01_03);
-        ArrayList<IPickerViewData> options3Items_01_04=new ArrayList<>();
-        options3Items_01_04.add(new PickerViewData("其他"));
-        options3Items_01_04.add(new PickerViewData("其他"));
-        options3Items_01_04.add(new PickerViewData("其他"));
-        options3Items_01.add(options3Items_01_04);
-        ArrayList<IPickerViewData> options3Items_01_05=new ArrayList<>();
-
-        options3Items_01_05.add(new PickerViewData("其他1"));
-        options3Items_01_05.add(new PickerViewData("其他2"));
-        options3Items_01.add(options3Items_01_05);
-
-        ArrayList<IPickerViewData> options3Items_02_01=new ArrayList<>();
-
-        options3Items_02_01.add(new PickerViewData("长沙1"));
-        options3Items_02_01.add(new PickerViewData("长沙2"));
-        options3Items_02_01.add(new PickerViewData("长沙3"));
-        options3Items_02_01.add(new PickerViewData("长沙4"));
-        options3Items_02_01.add(new PickerViewData("长沙5"));
-
-
-
-
-        options3Items_02.add(options3Items_02_01);
-        ArrayList<IPickerViewData> options3Items_02_02=new ArrayList<>();
-
-        options3Items_02_02.add(new PickerViewData("岳阳"));
-        options3Items_02_02.add(new PickerViewData("岳阳1"));
-        options3Items_02_02.add(new PickerViewData("岳阳2"));
-        options3Items_02_02.add(new PickerViewData("岳阳3"));
-        options3Items_02_02.add(new PickerViewData("岳阳4"));
-        options3Items_02_02.add(new PickerViewData("岳阳5"));
-
-        options3Items_02.add(options3Items_02_02);
-        ArrayList<IPickerViewData> options3Items_03_01=new ArrayList<>();
-        options3Items_03_01.add(new PickerViewData("好山水"));
-        options3Items_03.add(options3Items_03_01);
-
-        options3Items.add(options3Items_01);
-        options3Items.add(options3Items_02);
-        options3Items.add(options3Items_03);
-
-        //三级联动效果
-        pvOptions.setPicker(options1Items, options2Items, options3Items, true);
-
-        //设置选择的三级单位
-        pvOptions.setLabels("省", "市", "区");
-
-        pvOptions.setTitle("选择城市");
-        pvOptions.setCyclic(false, false, false);
-        //设置默认选中的三级项目
-        //监听确定选择按钮
-        pvOptions.setSelectOptions(1, 1, 1);
-
-        pvOptions.setOnoptionsSelectListener(new CustomOptions.OnOptionsSelectListener() {
-
+        initCustomTimePicker();
+        btnShow = (AppCompatButton) findViewById(R.id.btn_show);
+        btnShow.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onOptionsSelect(int options1, int option2, int options3) {
-                //返回的分别是三个级别的选中位置
-                String tx = options1Items.get(options1).getPickerViewText()
-                        + options2Items.get(options1).get(option2)
-                        + options3Items.get(options1).get(option2).get(options3).getPickerViewText();
-                tvOptions.setText(tx);
+            public void onClick(View view) {
+                // "1212300"
+//                Random random = new Random();
+//                String schedule = "12" + random.nextInt(4) + "2300";
+                mpv.setSchedule("1212300");
+                mpv.show();
             }
         });
-        //点击弹出选项选择器
-        tvOptions.setOnClickListener(new View.OnClickListener() {
+    }
 
+    private void initCustomTimePicker() {
+
+        /**
+         * @description
+         *
+         * 注意事项：
+         * 1.自定义布局中，id为 optionspicker 或者 timepicker 的布局以及其子控件必须要有，否则会报空指针.
+         * 具体可参考demo 里面的两个自定义layout布局。
+         * 2.因为系统Calendar的月份是从0-11的,所以如果是调用Calendar的set方法来设置时间,月份的范围也要是从0-11
+         * setRangDate方法控制起始终止时间(如果不设置范围，则使用默认时间1900-2100年，此段代码可注释)
+         */
+        Calendar selectedDate = Calendar.getInstance();//系统当前时间
+        Calendar startDate = Calendar.getInstance();
+        startDate.set(2014, 1, 23);
+        Calendar endDate = Calendar.getInstance();
+        endDate.set(2027, 2, 28);
+        //时间选择器 ，自定义布局
+        mpv = new MyPickerView.Builder(this, new MyPickerView.OnTimeSelectListener() {
             @Override
-            public void onClick(View v) {
-                pvOptions.show();
+            public void onTimeSelect(String date, View v) {//选中事件回调
+                btnShow.setText(date);
             }
-        });
+        })
+                /*.setType(TimePickerView.Type.ALL)//default is all
+                .setCancelText("Cancel")
+                .setSubmitText("Sure")
+                .setContentSize(18)
+                .setTitleSize(20)
+                .setTitleText("Title")
+                .setTitleColor(Color.BLACK)
+               /*
+                .setTextColorCenter(Color.LTGRAY)//设置选中项的颜色
+                .setLineSpacingMultiplier(1.6f)//设置两横线之间的间隔倍数
+                .setTitleBgColor(Color.DKGRAY)//标题背景颜色 Night mode
+                .setBgColor(Color.BLACK)//滚轮背景颜色 Night mode
+                .setSubmitColor(Color.WHITE)
+                .setCancelColor(Color.WHITE)
+                .setDividerColor(Color.BLACK)//设置分割线的颜色*/
+                .setDate(selectedDate)
+                .setRangDate(startDate, endDate)
+                .setLayoutRes(R.layout.pickerview_my, new CustomListener() {
+
+                    @Override
+                    public void customLayout(View v) {
+                        final TextView tvSubmit = (TextView) v.findViewById(R.id.btn_submit);
+                        TextView ivCancel = (TextView) v.findViewById(R.id.btn_cancel);
+                        tvSubmit.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                mpv.returnData();
+                            }
+                        });
+                        ivCancel.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                mpv.dismiss();
+                            }
+                        });
+                    }
+                })
+                .setType(new boolean[]{true, true, true})
+                .setLabel("年","月","日")
+                .isCenterLabel(false) //是否只显示中间选中项的label文字，false则每项item全部都带有label。
+//                .setSchedule("1212300")
+                .build();
+
+    }
+
+    private String getTime(Date date) {//可根据需要自行截取数据显示
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+        return format.format(date);
     }
 }
