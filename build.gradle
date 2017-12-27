@@ -46,3 +46,5 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+// 我在这里添加一行注释
