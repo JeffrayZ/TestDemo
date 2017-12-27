@@ -33,6 +33,13 @@ class MainActivity : AppCompatActivity() {
 //        canNull(args)
 
 //        getStringLength(2.14)
+
+//        val x: IntArray = intArrayOf(1, 2, 3)
+//        Log.e("=====",(x[1] + x[2]).toString())
+
+//        dd()
+
+        xh()
     }
 
     fun sum(a : Int, b : Int): String {
@@ -127,5 +134,38 @@ class MainActivity : AppCompatActivity() {
             print(i)
         }
         println("\n----------------")
+    }
+
+    /**
+     * 迭代
+     * for (item in collection) print(item)
+     * */
+    fun dd() {
+        val items = listOf("apple", "banana", "kiwi")
+        for (item in items) {
+            Log.e("迭代",item)
+        }
+
+        for (index in items.indices) {
+//            println("item at $index is ${items[index]}")
+            Log.e("迭代","item at $index is ${items[index]}")
+        }
+    }
+
+    /**
+     * 循环控制
+     * */
+    fun xh() {
+//        println("----while 使用-----")
+        var x = 5
+        while (x > 0) {
+//            println( x--)
+            Log.e("循环X",x--.toString())
+        }
+//        println("----do...while 使用-----")
+        var y = 5
+        do {
+            Log.e("循环Y",y--.toString())
+        } while(y>0)
     }
 }
