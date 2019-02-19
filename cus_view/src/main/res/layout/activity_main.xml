@@ -50,10 +50,10 @@
         <!--android:id="@+id/button"/>-->
 
 
-    <!--<com.cus_view.SimpleLineChart-->
-        <!--android:layout_width="400dp"-->
-        <!--android:layout_height="200dp"-->
-        <!--android:id="@+id/slc" />-->
+    <com.cus_view.SimpleLineChart
+        android:layout_width="400dp"
+        android:layout_height="200dp"
+        android:id="@+id/slc" />
 
 
     <com.cus_view.PanelView
