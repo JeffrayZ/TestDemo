@@ -4,7 +4,7 @@
     android:versionCode="301"
     android:versionName="3.0.1"
     >
-    <uses-sdk android:minSdkVersion="9" android:targetSdkVersion="21" />
+    <uses-sdk android:targetSdkVersion="21" />
 
     <!-- Required -->
     <permission

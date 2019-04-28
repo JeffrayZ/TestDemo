@@ -18,4 +18,10 @@
         android:layout_height="wrap_content"
         android:text="跳转界面2"
         android:id="@+id/btn_jump"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="新通知"
+        android:id="@+id/btn_new"/>
 </LinearLayout>

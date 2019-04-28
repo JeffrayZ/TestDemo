@@ -52,7 +52,6 @@ dependencies {
     compile 'com.android.support:support-vector-drawable:23.4.0'
     compile 'com.android.support:animated-vector-drawable:23.4.0'
     compile 'com.github.promeg:tinypinyin:1.0.0' // ~80KB
-    compile 'com.android.support.constraint:constraint-layout:1.0.0-beta4'
 
 }
 
