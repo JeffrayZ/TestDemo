@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">svgDemo</string>
+
+    <string-array name="report_array">
+        <item>耳机有杂音</item>
+        <item>听不见学生的声音</item>
+        <item>学生听不到我的声音</item>
+        <item>翻不动课件</item>
+        <item>有延迟</item>
+        <item>请IT人员立刻与我联系</item>
+        <item>请课后与我联系</item>
+        <item>严重卡顿</item>
+        <item>摄像头有异常，看不到画面</item>
+    </string-array>
+</resources>
